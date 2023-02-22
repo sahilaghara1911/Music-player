@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap");
 
 
 html{
@@ -8,10 +8,114 @@ html{
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: azure;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: spartan, sans-serif;
+    font-family: Spartan, sans-serif;
     font-size: 12px;
+    color: white;
+    
 }
+
+.player-container{
+    height: 500px;
+    width: 400px;
+    background-color: rgba(19, 17, 17, 0.68);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    top: -50px;
+    left: 50px;
+}
+.img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#title {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+#artist {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    margin: 0 5px 5px;
+}
+
+/* progress */
+.progress-container {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 20px;
+    height: 4px;
+    width: 90%;
+}
+.progress {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    height: 100%;
+    /* Change this to show progress */
+    transition: width 0.1s linear;
+
+}
+.duration-wrapper {
+    position: relative;
+    top: -20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Controls */
+.player-controls {
+    position: relative;
+    top: -15px;
+    left: 120px;
+    width: 200px;
+  }
+  
+  .fas {
+    font-size: 30px;
+    color: rgb(129, 129, 129);
+    margin-right: 30px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .fas:hover {
+    filter: brightness(80%);
+  }
+
+  .main-button {
+    font-size: 40px;
+    position: relative;
+    top: 3px;
+  }
+
+@media screen and (max-width: 376px) {
+    .player-container {
+        width: 95vh;
+    }
+    .img-container {
+        left: 29px;
+    }
+    #title {
+        font-size: 20px;
+    }
+    #artist {
+        font-size: 15px;
+    }
+}
+
+
