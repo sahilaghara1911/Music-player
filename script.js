@@ -68,14 +68,37 @@ function pauseSong() {
 playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 
 // Update DOM
-function loadSong(song) {
-    title.textContent = song.displayName;
-    artist.textContent = song.artist;
-    music.src = `Music/${song.name}.mp3`;
-    image.src = `Img/${song.name}.jpg`;
+function loadSong(songs) {
+    title.textContent = songs.displayName;
+    artist.textContent = songs.artist;
+    music.src = `Music/${songs.name}.mp3`;
+    image.src = `Img/${songs.name}.jpg`;
 }
+// Current Song
+let songIndex =0;
 
 // On load - Select First Song
-loadSong(songs[5]);
+loadSong(songs[songIndex]);
+
+// Next song
+function nextSong() {
+    songIndex++;
+    if( songIndex > songs.length -1) {
+        songIndex =0
+    }
+    console.log(songIndex);
+    loadSong(songs[songIndex]);
+    playSong();
+}
+
+// Prev song
+function prevSong() {
+    songIndex--;
+    console.log(songIndex);
+    loadSong(songs[songIndex]);
+    playSong();
+}
 
 // Event Listnener
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong)
