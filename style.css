@@ -63,7 +63,7 @@ body {
     width: 90%;
 }
 .progress {
-    background-color: whitesmoke;
+    background-color: rgb(136, 130, 130);
     border-radius: 5px;
     height: 100%;
     /* Change this to show progress */
@@ -72,9 +72,12 @@ body {
 }
 .duration-wrapper {
     position: relative;
-    top: -20px;
+    top: -25px;
     display: flex;
     justify-content: space-between;
+  }
+  #duration {
+    float: right;
   }
 
   /* Controls */
